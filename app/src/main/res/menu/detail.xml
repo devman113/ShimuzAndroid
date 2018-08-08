@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuDownload"
+        android:icon="@drawable/av_download"
+        app:showAsAction="ifRoom"
+        android:title="Download"
+        />
+    <item
+        android:id="@+id/menuDelete"
+        android:icon="@drawable/content_discard"
+        app:showAsAction="ifRoom"
+        android:title="Remove Download"
+        android:visible="false"
+        />
+    <item
+        android:id="@+id/menuShare"
+        android:icon="@drawable/social_share"
+        app:showAsAction="ifRoom"
+        android:title="Share"
+        />
+    <item
+        android:id="@+id/menuPrint"
+        app:showAsAction="ifRoom"
+        android:title="Print"
+        android:visible="false"
+        />
+
+</menu>

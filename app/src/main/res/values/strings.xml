@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">The Shmuz</string>
+    <string name="tab_shmuz">Shmuz List</string>
+    <string name="tab_parsha">Shmuz on the Parsha</string>
+    <string name="tab_series">Series</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_link">Support TheShmuz</string>
+    <string name="title_activity_series">Series</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_print">Print</string>
+    <string name="title_activity_signin">My Account</string>
+
+    <string name="now_playing">Now Playing</string>
+
+    <string name="status_stopped">Stopped</string>
+    <string name="status_preparing">Preparing</string>
+    <string name="status_buffering">Buffering</string>
+    <string name="status_playing">Playing</string>
+    <string name="status_paused_app">Paused for App</string>
+    <string name="status_empty"></string>
+
+    <!-- Sharing is caring -->
+    <string name="share_app_dialog_title">Share The Shmuz</string>
+    <string name="share_app_subject">Download The Shmuz for Android</string>
+    <string name="share_app_text">Download the new Shmuz app from the play store and access hundreds of audio, video and articles from The Shmuz.\nhttps://play.google.com/store/apps/details?id=com.theshmuz.app</string>
+
+    <string name="share_item_dialog_title">Share...</string>
+
+    <!-- For the tease player -->
+    <string name="login">Log In</string>
+    <string name="become_a_member">Become a Member</string>
+
+    <string name="search_hint">Search...</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
+
+    <!-- Replace placeholder ID with your tracking ID -->
+    <string name="ga_trackingId">UA-40207520-1</string>
+    
+    <bool name="ga_autoActivityTracking">true</bool>
+    
+    <string name="com.theshmuz.app.MainActivity">Home Activity</string>
+	<string name="com.theshmuz.app.DetailActivity">Item Activity</string>
+	<string name="com.theshmuz.app.PrintDialogActivity">Print Dialog</string>
+    <string name="com.theshmuz.app.EmailListActivity">Email Signup Activity</string>
+
+</resources>

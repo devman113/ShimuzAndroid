@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/player"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_player"
+    android:padding="4dp" >
+
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/av_play" />
+
+    <SeekBar
+        android:id="@+id/seeker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/playButton" />
+
+    <TextView
+        android:id="@+id/positionTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seeker"
+        android:layout_toRightOf="@+id/playButton" />
+
+    <TextView
+        android:id="@+id/playerStatus"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seeker"
+        android:layout_toLeftOf="@+id/durationTime"
+        android:layout_toRightOf="@+id/positionTime"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/durationTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/seeker" />
+
+    <ViewStub
+        android:id="@+id/tease"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/audio_tease" />
+
+</RelativeLayout>

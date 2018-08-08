@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/parshaLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/abs__holo_blue_light"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="4dp"
+            android:text="SHMUZ ON THE PARSHA"
+            android:textColor="#FFF"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/parshaLatestContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/parshaLabel"
+            android:background="@drawable/bg_latest"
+            android:padding="8dp" >
+
+            <ImageView
+                android:id="@+id/parshaImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="100dp"
+                android:src="@drawable/bg_stub" />
+
+            <TextView
+                android:id="@+id/parshaTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/parshaImage"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/parshaArchiveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/parshaLatestContainer"
+            android:text="Archives" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="invisible"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/burstLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/abs__holo_blue_light"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="4dp"
+            android:text="BURST OF INSPIRATION"
+            android:textColor="#FFF"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/burstLatestContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/burstLabel"
+            android:background="@drawable/bg_latest"
+            android:padding="8dp" >
+
+            <ImageView
+                android:id="@+id/burstImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="100dp"
+                android:src="@drawable/bg_stub" />
+
+            <TextView
+                android:id="@+id/burstTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/burstImage"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/burstArchiveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/burstLatestContainer"
+            android:text="Archives" />
+    </RelativeLayout>
+
+</LinearLayout>
