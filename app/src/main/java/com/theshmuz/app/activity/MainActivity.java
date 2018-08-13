@@ -152,6 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 hardcodePopup1.show(getSupportFragmentManager(), "dialogH");
             }
         }
+        startActivity(IntroActivity.createIntent(this));
     }
 
     @Override

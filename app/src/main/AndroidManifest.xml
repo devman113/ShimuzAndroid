@@ -2,25 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.theshmuz.app">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="17" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
-        android:name="com.theshmuz.app.Shmuz"
+        android:name=".Shmuz"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher3"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
-            android:name="com.theshmuz.app.activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name"
-            android:launchMode="singleTop" >
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,71 +30,78 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.theshmuz.app.UpdateService" />
-        <service android:name="com.theshmuz.app.streamer.Streamer" />
+        <service android:name=".UpdateService" />
+        <service android:name=".streamer.Streamer" />
 
         <activity
-            android:name="com.theshmuz.app.activity.SeriesActivity"
+            android:name=".activity.SeriesActivity"
             android:label="@string/title_activity_series"
-            android:parentActivityName="com.theshmuz.app.activity.MainActivity" >
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.theshmuz.app.activity.MainActivity" />
         </activity>
         <activity
-            android:name="com.theshmuz.app.activity.SearchActivity"
-            android:launchMode="singleTop"
+            android:name=".activity.SearchActivity"
             android:label="@string/title_activity_search"
-            android:parentActivityName="com.theshmuz.app.activity.MainActivity" >
+            android:launchMode="singleTop"
+            android:parentActivityName=".activity.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.SEARCH"/>
+                <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
 
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable"
-                android:value=".activity.SearchActivity"/>
-
+                android:value=".activity.SearchActivity" />
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.theshmuz.app.activity.MainActivity" />
         </activity>
         <activity
-            android:name="com.theshmuz.app.activity.DetailActivity"
+            android:name=".activity.DetailActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_detail"
-            android:parentActivityName="com.theshmuz.app.activity.MainActivity" >
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.theshmuz.app.activity.MainActivity" />
         </activity>
         <activity
-            android:name="com.theshmuz.app.activity.InternalLink"
+            android:name=".activity.InternalLink"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_link"
-            android:parentActivityName="com.theshmuz.app.activity.MainActivity" >
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.theshmuz.app.activity.MainActivity" />
         </activity>
         <activity
-            android:name="com.theshmuz.app.activity.PrintDialogActivity"
+            android:name=".activity.PrintDialogActivity"
             android:label="@string/title_activity_print" />
         <activity
-            android:name="com.theshmuz.app.activity.AccountActivity"
-            android:label="@string/title_activity_signin">
-        </activity>
+            android:name=".activity.AccountActivity"
+            android:label="@string/title_activity_signin" />
 
         <!-- Used for install referral measurement -->
         <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
 
         <receiver
             android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:label="Tutorials"
+            android:parentActivityName=".activity.MainActivity"
+            android:name=".activity.IntroActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.theshmuz.app.activity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
