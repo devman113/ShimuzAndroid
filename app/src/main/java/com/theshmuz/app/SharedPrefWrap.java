@@ -46,6 +46,16 @@ public class SharedPrefWrap {
 
     public static final int CURRENT_VERSION = 2;
 
+    public static final boolean firstRunning = true;
+    private static final String KEY_FIRST_RUNNING = "firstRunning";
+    public boolean getFirstRunningStatus() {
+        return settings.getBoolean(KEY_FIRST_RUNNING, true);
+    }
+    public void setFirstRunningStatus() {
+        settings.edit().putBoolean(KEY_FIRST_RUNNING, false).apply();
+    }
+
+
     private static SharedPrefWrap mInstance;
 
     public static SharedPrefWrap getInstance(Context context) {
