@@ -96,11 +96,7 @@
 
         <activity
             android:label="Tutorials"
-            android:parentActivityName=".activity.MainActivity"
             android:name=".activity.IntroActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.theshmuz.app.activity.MainActivity" />
         </activity>
     </application>
 
