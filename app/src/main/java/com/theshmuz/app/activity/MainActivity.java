@@ -391,6 +391,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(!D.D) EasyTracker.getTracker().sendEvent("ui_action", "menu_press", "My Account Button", (long) 0);
                 openLogin(false);
                 return true;
+            case R.id.menuTutorials:
+                startActivity(IntroActivity.createIntent(this));
+                return true;
 
             case R.id.menuShare:
                 if(!D.D) EasyTracker.getTracker().sendEvent("ui_action", "menu_press", "Share App Button", (long) 0);
