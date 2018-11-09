@@ -25,6 +25,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -96,6 +97,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         searchButton = (FloatingActionButton) findViewById(R.id.floating_button);
         searchButton.setOnClickListener(this);
+
+        ImageView imgview = (ImageView)findViewById(R.id.imageView);
+
+        imgview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browse = new Intent( Intent.ACTION_VIEW , Uri.parse("https://www.charidy.com/theshmuz"));
+                startActivity( browse );
+            }
+        });
 
         final ActionBar actionBar = getSupportActionBar();
 
